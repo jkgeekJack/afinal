@@ -53,6 +53,10 @@ db.deleteAll(User.class); //删除Bean对应的数据表中的所有数据
 
 List<User> resultList = db.findAllByWhere(User.class,"id>5 and name=\"探索者\"");//多个where条件查询
 
+user.setId(1);//根据id更新内容
+user.setName("jack xian");
+db.update(user);
+
 ```
 
 ----
