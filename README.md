@@ -43,6 +43,15 @@ User user = new User(); //这里需要注意的是User对象必须有id属性，
 user.setEmail("mail@tsz.net");
 user.setName("michael yang");
 db.save(user);
+
+db.delete(user); //根据对象主键进行删除，把实例的主键set好				
+db.deleteById(user, 1); //根据主键删除数据
+db.deleteByWhere(User.class, "name=\"探索者\""); //自定义where条件删除,字符串类型要加\转义双引号
+db.deleteByWhere(User.class, "name=\"探索者\" and email=mail@tsz.net"); //自定义多个where条件删除
+db.deleteAll(User.class); //删除Bean对应的数据表中的所有数据
+
+List<User> resultList = db.findAllByWhere(User.class,"id>5 and name=\"探索者\"");//多个where条件查询
+
 ```
 
 ----
