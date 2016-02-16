@@ -28,6 +28,7 @@
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 ```
 * 第一个是访问网络
 * 第二个是访问sdcard
